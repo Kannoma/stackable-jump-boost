@@ -1,6 +1,6 @@
 {
 	"name": "Jump Boost",
-	"id": "jump-boost",
+	"id": "jump_boost",
 	"version": "1.0.0",
 	"description": "Jump Boost feature\nEnhances player jump height with configurable multipliers, duration, and cooldown system. Showcases the full Custom Resources system.",
 	"author": "Kanno",
