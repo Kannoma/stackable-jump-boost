@@ -1,5 +1,5 @@
 {
-	"author": "Kanno_",
+	"author": "Kanno",
 	"config_file": "config_default.tres",
 	"description": "Jump Boost feature\nEnhances player jump height with configurable multipliers, duration, and cooldown system. Showcases the full Custom Resources system.",
 	"engine_versions": ["4.3","4.4"],
