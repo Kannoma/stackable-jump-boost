@@ -1,0 +1,10 @@
+{
+  "name": "Jump Boost",
+  "id": "jump_boost",
+  "version": "1.0.0",
+  "description": "Jump Boost feature\nEnhances player jump height with configurable multipliers, duration, and cooldown system. Showcases the full Custom Resources system.",
+  "author": "Kanno",
+  "engine_versions": ["4.3", "4.4"],
+  "entry_point": "example_module.gd",
+  "config_file": "config_default.tres"
+} 

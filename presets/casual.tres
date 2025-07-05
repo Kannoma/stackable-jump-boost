@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="JumpBoostConfig" format=3]
+
+[ext_resource type="Script" path="res://stackable_features/example_module/example_module_config.gd" id="1_example_config"]
+
+[resource]
+script = ExtResource("1_example_config")
+boost_multiplier = 1.8
+boost_duration = 0.8
+visual_effect = true
+max_uses = 4
+cooldown_time = 4.0
+auto_activate = false
+boost_sound = true
+particle_color = Color(0, 0.8, 1, 1) 
