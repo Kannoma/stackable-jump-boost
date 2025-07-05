@@ -6,5 +6,6 @@
 	"author": "Kanno",
 	"engine_versions": ["4.3", "4.4"],
 	"entry_point": "example_module.gd",
-	"config_file": "config_default.tres"
+	"config_file": "config_default.tres",
+	"repository": "https://github.com/Kannoma/stackable-jump-boost"
  } 
