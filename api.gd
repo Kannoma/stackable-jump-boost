@@ -75,18 +75,32 @@ func get_boost_duration() -> float:
 		return _module.config.boost_duration
 	return 0.0
 
+# Preset loading is now handled automatically by ModuleRegistry
+# No need to override load_preset() or get_available_presets() anymore!
+
 # =============================================================================
 # TUTORIAL NOTE FOR DEVELOPERS:
 # =============================================================================
-# This API is now much lighter! We removed ~150 lines of boilerplate.
+# This API is now ULTRA-LIGHT! Preset loading is completely automatic.
 # 
-# For common operations, use ModuleRegistry instead:
-#   - ModuleRegistry.get_config("jump_boost")
-#   - ModuleRegistry.set_config("jump_boost", config)  
-#   - ModuleRegistry.load_preset("jump_boost", "speedrun")
+# ✅ AUTOMATIC (no code needed):
+#   - ModuleRegistry.load_preset("jump_boost", "speedrun")  # Loads from /presets/ automatically
+#   - ModuleRegistry.get_presets("jump_boost")              # Discovers presets automatically
+#   - ModuleRegistry.get_config("jump_boost")               # Works automatically
+#   - ModuleRegistry.set_config("jump_boost", config)       # Works automatically
 #   - ModuleRegistry.save_config("jump_boost", "user://my_config.tres")
-#   - ModuleRegistry.get_presets("jump_boost")
 #   - ModuleRegistry.reset_config("jump_boost")
 #
-# This API focuses only on what makes THIS module unique!
+# 🎯 YOUR API ONLY NEEDS:
+#   - Module-specific functions (like activate_boost, get_boost_status)
+#   - Custom business logic unique to your module
+#   - Everything else is handled automatically by the plugin!
+#
+# 📁 REQUIRED MODULE STRUCTURE:
+#   my_module/
+#   ├── manifest.json          # Default config
+#   ├── presets/              # Optional - auto-discovered
+#   │   ├── speedrun.tres
+#   │   └── casual.tres
+#   └── api.gd               # Only module-specific functions!
 # ============================================================================= 

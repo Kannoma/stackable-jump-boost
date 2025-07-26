@@ -105,7 +105,23 @@ func setup_visual_effects() -> void:
 	
 	# Note: Status label removed - external tester handles UI display
 
-
+## Loads the default configuration for this module [br]
+## [code]module.load_default_config()[/code]
+func load_default_config() -> void:
+	# Use the new portable resource loading
+	var module_path = get_script().resource_path.get_base_dir()
+	var default_config = FeatureConfig.load_module_resource(
+		module_path + "/config_default.tres",
+		module_path + "/config.gd"
+	)
+	
+	if default_config:
+		config = default_config
+		print("JumpBoostModule: Default configuration loaded successfully")
+	else:
+		# Fallback to creating a new config
+		config = JumpBoostConfig.new()
+		print("JumpBoostModule: Created new default configuration")
 
 ## Activates the jump boost if available [br]
 ## [code]var success = activate_boost()[/code]
